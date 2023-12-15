@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstap.min.css" integrity="sha384-ggoyR0iXCbMQv34MD+dH/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    body{
+        background-image: url('home.jpg' );
+        padding-top:90px ;
+       
+    }
+    
+     .center-column{
+         width: 800px;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: rgb(230, 221, 252);
+         border-radius: 16px;
+         box-shadow:2px 2px 15px 0px rgb(58, 58, 58);
+     }
+     .btn-danger{
+        border-color: rgb(5, 5, 5);
+        font-style: italic;
+        background-color: rgb(248, 123, 6);
+        margin:2px;
+        padding: 5px;
+        border-radius: 10px;
+        color: rgb(5, 5, 5);
+        box-shadow: 3px 1px 6px 0px rgb(58, 58, 58);
+     }
+    .item-row{
+        font-style: italic;
+        background-color: rgb(11, 27, 109);
+        margin: 10px;
+        padding-top: 30px;
+        padding: 10px;
+        border-radius: 8px;
+        color: rgb(255, 251, 251);
+        box-shadow: 3px 1px 6px 0px rgb(58, 58, 58);
+    }
+</style>
+
+
+<img src="todo.jpg" alt="" >
+<form class="center-column" method="POST" action="">
+    <div class="item-row">
+    {% csrf_token %}
+    {{form}}
+    <input class="btn-danger" type="submit" name="update task" value="update">
+</div>
+</form>

@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstap.min.css" integrity="sha384-ggoyR0iXCbMQv34MD+dH/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    body{
+        background-color: rgb(242, 242, 247);
+        padding-top: 90px;
+    }
+    .submit{
+         
+         border-radius: 16px;
+         font-style:inherit;
+         box-shadow:1px 2px 3px 0px rgb(58, 58, 58);
+         padding-top: 10px;
+         
+        }
+        .submit{
+         
+         border-radius: 16px;
+         font-style:inherit;
+         box-shadow:1px 2px 3px 0px rgb(58, 58, 58);
+         padding-top: 10px;
+         
+        }
+     .center-column{
+         width: 800px;
+         margin: 20px auto;
+         padding: 30px;
+         background-color: rgb(34, 0, 114);
+         border-radius: 16px;
+         box-shadow:2px 2px 15px 0px rgb(58, 58, 58);
+     }
+    .item-row{
+        font-style: italic;
+        background-color:  rgb(166, 179, 253);
+        margin: 30px;
+        padding: 10px;
+        border-radius: 16px;
+        color: rgb(5, 5, 5);
+        box-shadow: 3px 1px 6px 0px rgb(58, 58, 58);
+    }
+        .btn-danger{
+        border-color: rgb(5, 5, 5);
+        font-style: italic;
+        background-color: rgb(248, 123, 6);
+        margin:10px;
+        padding:5px;
+        border-radius: 10px;
+        color: rgb(5, 5, 5);
+        box-shadow: 3px 1px 6px 0px rgb(58, 58, 58);
+    }
+    .btn-dcancel{
+        border-color: rgb(5, 5, 5);
+        font-style: italic;
+        background-color: rgb(236, 231, 250);
+        margin:10px;
+        padding:5px;
+        border-radius: 10px;
+        color: rgb(5, 5, 5);
+        box-shadow: 3px 1px 6px 0px rgb(58, 58, 58);
+    }
+</style>
+
+<div class="center-column">
+    <p class="item-row">Are you sure you want to delete"{{item}}"?</p>
+    
+    
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.title}}
+    <input class="btn-danger" type="submit" name="confirm" value="delete">
+    <a class="btn-dcancel" href="{% url 'index' %}">cancel</a>
+    
+</div>
+</form>
